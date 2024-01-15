@@ -30,29 +30,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import CommentEntry from '~/components/CommentEntry.vue';
-import CommentForm from '~/components/CommentForm.vue';
+  import { defineComponent, ref } from 'vue';
+  import CommentEntry from '~/components/CommentEntry.vue';
+  import CommentForm from '~/components/CommentForm.vue';
 
-export default defineComponent({
-  components: {
-    CommentEntry,
-    CommentForm,
-  },
-  props: {
-    topic: Object,
-  },
-  setup(props) {
-    const expanded = ref(false);
-
-    const toggleExpanded = () => {
-      expanded.value = !expanded.value;
-    };
-
-    return {
-      expanded,
-      toggleExpanded,
-    };
-  },
-});
+  export default defineComponent({
+    components: {
+      CommentEntry,
+      CommentForm,
+    },
+    props: {
+      topic: Object,
+    },
+    setup(props) {
+      const expanded = ref(false);
+      const toggleExpanded = () => {
+        expanded.value = !expanded.value;
+      };
+      return {
+        expanded,
+        toggleExpanded,
+      };
+    },
+  });
 </script>

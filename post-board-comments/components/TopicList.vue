@@ -16,7 +16,7 @@
 </template>
   
   
-  <script lang="ts">
+<script lang="ts">
   import { defineComponent } from 'vue';
   import TopicEntry from '~/components/TopicEntry.vue';
   
@@ -78,5 +78,5 @@
       };
     },
   });
-  </script>
+</script>
   

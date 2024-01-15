@@ -13,25 +13,22 @@
   </div>
 </template>
   
-  <script lang="ts">
-    import {defineComponent, ref } from 'vue';
-
-    export default defineComponent({
-      setup() {
-        const commentText = ref('');
-
-        const sendComment = () => {
-          // Handle comment submission logic here
-          console.log('Comment sent:', commentText.value);
-          // Clear the textarea after sending the comment
-          commentText.value = '';
-        };
-
-        return {
-          commentText,
-          sendComment,
-        };
-      },
-    });
-  </script>
+<script lang="ts">
+  import {defineComponent, ref } from 'vue';
+  export default defineComponent({
+    setup() {
+      const commentText = ref('');
+      const sendComment = () => {
+        // Handle comment submission logic here
+        console.log('Comment sent:', commentText.value);
+        // Clear the textarea after sending the comment
+        commentText.value = '';
+      };
+      return {
+        commentText,
+        sendComment,
+      };
+    },
+  });
+</script>
   
