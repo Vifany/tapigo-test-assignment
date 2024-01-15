@@ -4,12 +4,17 @@
     <p class="comment-date">Date: {{ comment.date }}</p>
     <button v-if="renderSubcomment" @click="toggleCommentForm" class="btn btn-sm btn-secondary">Comment</button>
     <CommentForm v-if="showCommentForm && renderSubcomment" />
-    <CommentEntry
-      :renderSubcomment = false
-      v-for="subcomment in comment.subComments"
-      :key="subcomment.id"
-      :comment="subcomment"
-    />
+    <div 
+      class="container ml-3"
+      >
+      <CommentEntry
+        :renderSubcomment = false
+        v-for="subcomment in comment.subComments"
+        :key="subcomment.id"
+        :comment="subcomment"
+      
+        />
+    </div>
   </div>
 </template>
 
